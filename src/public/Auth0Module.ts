@@ -45,7 +45,9 @@ export class Auth0Module implements IEasyExpressAttachableModule {
    */
   public attachTo(server: EasyExpressServer): Promise<unknown> {
     this.server = server;
-    return new Promise(() => {});
+    return new Promise(() => {
+      // DO NOTHING
+    });
   }
 
   /**
