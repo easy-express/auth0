@@ -1,6 +1,6 @@
 {
   "name": "@easy-express/auth0",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A module that helps integrate auth0 into your Easy-Express Server!",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
