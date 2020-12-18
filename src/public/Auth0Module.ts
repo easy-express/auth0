@@ -17,10 +17,10 @@ export class Auth0Module implements IEasyExpressAttachableModule {
   /**
    * Constructs an Auth0Module that initializes the jwt handler.
    *
-   * @param auth0_domain the auth0 domain
-   * @param auth0_audience the auth0 audience
+   * @param auth0Domain the auth0 domain
+   * @param auth0Audience the auth0 audience
    */
-  constructor(auth0_domain?: string, auth0_audience?: string) {
+  constructor(auth0Domain?: string, auth0Audience?: string) {
     this.checkJwt = jwt({
       // Dynamically provide a signing key
       // based on the kid in the header and
@@ -29,11 +29,11 @@ export class Auth0Module implements IEasyExpressAttachableModule {
         cache: true,
         rateLimit: true,
         jwksRequestsPerMinute: 5,
-        jwksUri: `https://${auth0_domain ? auth0_domain : process.env.AUTH0_DOMAIN}/.well-known/jwks.json`,
+        jwksUri: `https://${auth0Domain ? auth0Domain : process.env.AUTH0_DOMAIN}/.well-known/jwks.json`,
       }),
       // Validate the audience and the issuer.
-      audience: auth0_audience ? auth0_audience : process.env.AUTH0_AUDIENCE,
-      issuer: `https://${auth0_domain ? auth0_domain : process.env.AUTH0_DOMAIN}/`,
+      audience: auth0Audience ? auth0Audience : process.env.AUTH0_AUDIENCE,
+      issuer: `https://${auth0Domain ? auth0Domain : process.env.AUTH0_DOMAIN}/`,
       algorithms: ['RS256'],
     });
   }
