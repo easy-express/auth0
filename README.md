@@ -1,4 +1,4 @@
-<h1 align="center">Welcome to Easy-Express's Auth0 Module 👋</h1>
+<h1 align="center">Welcome to Easy-Express's Auth0 Module (Incomplete)</h1>
 <p>
   <a href="https://www.npmjs.com/package/@easy-express/auth0" target="_blank">
     <img alt="Version" src="https://img.shields.io/npm/v/@easy-express/auth0.svg">
